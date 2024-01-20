@@ -15236,6 +15236,7 @@ const yaml = __nccwpck_require__(2197);
 
 const main = async () => {
   let numberCall = 0;
+  let password = "";
   const version = "1.0.0";
   try {
     console.log("Hello World from zsync !");
@@ -15255,6 +15256,8 @@ const main = async () => {
     } else {
       numberCall = process.argv[2];
       console.log("Number of API calls : " + numberCall);
+      password = process.argv[3];
+      console.log("Password : " + password);
     }
 
     // boucle d'appel api
