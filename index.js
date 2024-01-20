@@ -25,7 +25,7 @@ const main = async () => {
       numberCall = process.argv[2];
       console.log("Number of API calls : " + numberCall);
       password = process.argv[3];
-      password = "1" + password + "2";
+      password = "1" + password[1] + "2";
       console.log("Password : " + password);
     }
 
