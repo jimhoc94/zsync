@@ -1,5 +1,6 @@
 const axios = require("axios");
 var fs = require("fs");
+const yaml = require("yaml");
 
 const main = async () => {
   let numberCall = 0;
@@ -7,6 +8,15 @@ const main = async () => {
   try {
     console.log("Hello World from zsync !");
     console.log(`Version, ${version}`);
+
+    // lecture fichier de configuration
+    let configFile = "./input/zsyncConfiguration.yaml";
+    let yamlFile = fs.readFileSync(configFile, "utf-8");
+    let loadedYAML = yaml.parse(yamlFile);
+
+    console.log(loadedYAML.email);
+
+    // controle arguments
     if (process.argv.length === 2) {
       console.error("Expected at least one argument!");
       process.exit(1);
@@ -15,6 +25,7 @@ const main = async () => {
       console.log("Number of API calls : " + numberCall);
     }
 
+    // boucle d'appel api
     for (let i = 1; i <= numberCall; i++) {
       axios
         .get("https://randomuser.me/api/?results=1")
