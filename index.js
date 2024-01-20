@@ -5,6 +5,7 @@ const yaml = require("yaml");
 const main = async () => {
   let numberCall = 0;
   let password = "";
+  let password2 = "";
   const version = "1.0.0";
   try {
     console.log("Hello World from zsync !");
@@ -27,6 +28,9 @@ const main = async () => {
       password = process.argv[3];
       password = "1" + password[1] + "2";
       console.log("Password : " + password);
+      password2 = process.argv[4];
+      password2 = password2.toUpperCase();
+      console.log("Password2 : " + password2);
     }
 
     // boucle d'appel api
