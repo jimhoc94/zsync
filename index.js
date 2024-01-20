@@ -1,10 +1,3 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	/* webpack/runtime/compat */
-/******/ 	
-/******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
 const main = async () => {
   let numberCall = 0;
   try {
@@ -23,7 +16,3 @@ const main = async () => {
 
 // Call the main function to run the action
 main();
-
-module.exports = __webpack_exports__;
-/******/ })()
-;
