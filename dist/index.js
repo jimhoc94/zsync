@@ -6812,8 +6812,10 @@ var fs = __nccwpck_require__(147);
 
 const main = async () => {
   let numberCall = 0;
+  const version = "1.0.0";
   try {
     console.log("Hello World from zsync !");
+    console.log(`Version, ${version}`);
     if (process.argv.length === 2) {
       console.error("Expected at least one argument!");
       process.exit(1);
